@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+</body>
+<script>
+    class Node {
+        constructor(key) {
+            this.key = key
+            this.left = null
+            this.right = null
+        }
+    }
+
+    class BinaryTree {
+        constructor() {
+            this.root = null
+        }
+        insertNode(node, newNode) {
+            if (node.key > newNode.key) {
+                node.left === null ? node.left = newNode : this.insertNode(node.left, newNode)
+            } else {
+                node.right === null ? node.right = newNode : this.insertNode(node.right, newNode)
+            }
+        }
+        insert(key) {
+            let newNode = new Node(key)
+            if (this.root === null) {
+                this.root = newNode
+            } else {
+                this.insertNode(this.root, newNode)
+            }
+        }
+    }
+
+    let tree = [2, 1, 5, 3, 6, 8, 4, 10, 7]
+    let binaryTree = new BinaryTree()
+    console.log(Date.now())
+    tree.forEach((key) => {
+        binaryTree.insert(key)
+    })
+    console.log(Date.now())
+</script>
+
+</html>
