@@ -32,6 +32,11 @@ module.exports = {
         title: '算法',
         collapsable: false,
         children: ['algorithm/二叉树']
+      },
+      {
+        title: 'Python',
+        collapsable: false,
+        children: ['Python/', 'Python/data-type/Number']
       }
     ]
   }
