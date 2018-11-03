@@ -36,7 +36,20 @@ module.exports = {
       {
         title: 'Python',
         collapsable: false,
-        children: ['Python/', 'Python/data-type/Number']
+        children: ['Python/', 'Python/data-type/Number', 'Python/problem']
+      },
+      {
+        title: 'Linux',
+        collapsable: false,
+        children: [
+          'Linux/base',
+          'Linux/服务器使用/apache使用',
+          'Linux/服务器使用/cron同步使用',
+          'Linux/服务器使用/linux常见命令',
+          'Linux/服务器使用/linux进程后台运行的几种方法',
+          'Linux/服务器使用/ubnutu安装',
+          'Linux/服务器使用/网卡默认路由'
+        ]
       }
     ]
   }
